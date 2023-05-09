@@ -2,9 +2,10 @@ pipeline {
     agent any
     tools{
         maven 'M2_HOME'
-    }    
-    Stages('build') {
-          sleps {
+    }  
+    stages {
+        stage('build') {
+            steps {
              sh 'mvn clean'
              sh 'mvn install'
              sh 'mvn packages'
@@ -24,6 +25,6 @@ pipeline {
        steps {
          echo "Image step"
        }
+        }
     }
-  } 
 }
