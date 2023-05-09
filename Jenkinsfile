@@ -3,7 +3,7 @@ pipeline {
     tools{
         maven 'M2_HOME'
     }    
-    Stages ('build') {
+    Stages('build') {
           sleps {
              sh 'mvn clean'
              sh 'mvn install'
@@ -27,4 +27,4 @@ pipeline {
     }
    }
 
-}
+ }
